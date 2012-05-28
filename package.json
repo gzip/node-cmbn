@@ -1,0 +1,30 @@
+{
+  "name": "cmbn",
+  "description": "Generate and serve combo URLs across CDNs",
+  "version": "0.0.1",
+  "author": "Gamaiel Zavala <gamaiel@yahoo.com>",
+  "homepage": "cmbn.us",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gzip/node-cmbn.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gzip/node-cmbn/issues"
+  },
+  "engines": {
+    "node": ">= 0.4.2 < 0.7.0"
+  },
+  "dependencies": {
+    "async": "",
+    "request": "",
+    "express": "",
+    "gzippo": "",
+    "lru-cache": "",
+    "MD5": ""
+  },
+  "devDependencies": {
+    "supervisor": "",
+    "stripper": "",
+    "uglify-js": ""
+  }
+}
