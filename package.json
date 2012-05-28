@@ -17,8 +17,8 @@
   "dependencies": {
     "async": "",
     "request": "",
+    "connect": "",
     "express": "",
-    "gzippo": "",
     "lru-cache": "",
     "MD5": ""
   },
@@ -26,5 +26,8 @@
     "supervisor": "",
     "stripper": "",
     "uglify-js": ""
+  },
+  "optionalDependencies": {
+    "gzippo": ""
   }
 }
