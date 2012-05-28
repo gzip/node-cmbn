@@ -17,7 +17,7 @@
   "dependencies": {
     "async": "",
     "request": "",
-    "connect": "",
+    "connect": "1 - 2",
     "express": "",
     "lru-cache": "",
     "MD5": ""
