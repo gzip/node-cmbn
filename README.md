@@ -2,7 +2,7 @@
 
 Several public CDNs host popular JS libs, most notably [cdnjs.com](http://www.cdnjs.com/).
 Until now there was no easy way to combo the various libs into a single URL in order to maximize
-performance. This package fills that gap by generating and serving combo URLs across the
+performance. This package fills that gap by generating and serving combo URLs across
 various CDNs and any other public server.
 
 ## Install
@@ -11,9 +11,22 @@ various CDNs and any other public server.
 
 ## Usage
 
-This software is currently hosted at cmbn.us for demonstrative purposes but there are no guarantees to availability.
-It's recommended to install on your own host in order to enable comboing with application-specific assets.
+This software is currently demoed at cmbn.us there are no guarantees to availability.
+It's recommended to install cmbn on your own host in order to enable comboing with application-specific assets.
 To maximize performance even further cmbn should be fronted by a CDN like [CloudFlare](http://www.cloudflare.com/).
+
+### Standalone server
+
+    var cmbn = require('cmbn');
+    cmbn.server.createServer();
+
+##### Options
+
+In addition to the options available for `middleware` ,`createServer` accepts one or more of the following:
+
+* `port` - Port to listen on. Default is 80.
+* `staticDir` - Directory to serve static assets from. Particularly useful if comboing from localhost.
+* `staticMaxAge` - Number of seconds to set for `maxAge` in the `Cache-Control` header if serving local assets.
 
 ### Middleware
 
@@ -32,21 +45,6 @@ To maximize performance even further cmbn should be fronted by a CDN like [Cloud
 
 * `cacheSize` - The size in bytes to reserve for the [lru-cache](https://github.com/isaacs/node-lru-cache) which stores external assets which have been fetched. Default is `5000000` (~5MB).
 * `cacheFunc` -The cache function used to determine the size of each asset, default is to return `item.length`.
-
-### Standalone server
-
-    var cmbn = require('cmbn');
-    
-    // arguments are optional, default port is 80
-    cmbn.server.createServer();
-
-##### Options
-
-In addition to the options available for `middleware` ,`createServer` accepts one or more of the following:
-
-* `port` - Port to listen on. Default is 80.
-* `staticDir` - Directory to serve static assets from. Particularly useful if comboing from localhost.
-* `staticMaxAge` - Number of seconds to set for `maxAge` in the `Cache-Control` header if serving local assets.
 
 ### Node Client
 
