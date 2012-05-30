@@ -11,7 +11,7 @@ various CDNs and any other public server.
 
 ## Usage
 
-This software is currently demoed at cmbn.us there are no guarantees to availability.
+This software is currently demoed at cmbn.us but there are no guarantees to availability.
 It's recommended to install cmbn on your own host in order to enable comboing with application-specific assets.
 To maximize performance even further cmbn should be fronted by a CDN like [CloudFlare](http://www.cloudflare.com/).
 
@@ -96,6 +96,12 @@ See Node Client.
     
     // http://localhost:8080/~gg;jquery,1.7.2,jquery.min.js/~lh;cmbn,0.0.1,cmbn.min.js
     console.log(url);
+
+### Run the Example
+
+After installing the package run `node examples` from the package root.
+A link will be output by the client and the server will start.
+Copy the link and paste it into a browser to see the comboed output.
 
 ### More
 
