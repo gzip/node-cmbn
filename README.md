@@ -84,7 +84,7 @@ See Node Client.
 
 ### Adding a CDN
 
-    var cmbn = require('../index');
+    var cmbn = require('cmbn');
         
     // add cdn for localhost
     cmbn.cdns.addCdn('lh', {host: 'localhost:8080', prefix: 'libs/'});
