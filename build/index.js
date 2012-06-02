@@ -5,6 +5,7 @@ var fs = require('fs'),
     cdns = root + 'lib/cdns.js',
     client = root + 'lib/combine.js',
     pkg = JSON.parse(fs.readFileSync(root + 'package.json', 'utf-8')),
+    c = fs.readFileSync(root + 'build/copyright.js', 'utf-8'),
     ver = pkg.version,
     outfile = root + 'examples/public/libs/cmbn/' + ver + '/cmbn.min.js',
     out = strip(cdns) + '\n' + strip(client);
@@ -28,7 +29,7 @@ function write(outfile, out)
     
     // write minified
     console.log('Writing ' + file + '...');
-    fs.writeFileSync(file, outmin, 'utf-8');
+    fs.writeFileSync(file, c + outmin, 'utf-8');
     
     // write unminified
     file = file.replace('.min', '');

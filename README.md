@@ -109,4 +109,4 @@ See the examples folder and code for more usage information.
 
 ## License
 
-MIT
+MIT License. See the accompanying LICENSE file for terms.

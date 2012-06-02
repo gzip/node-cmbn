@@ -1,3 +1,6 @@
+/* Copyright (c) 2012 Yahoo! Inc.  All rights reserved.
+   Copyrights licensed under the MIT License. See the accompanying LICENSE file for terms. */
+
 ;(function(){
 
 /* was attempting the following formatters for gg and ms but the assets don't have enough consistency
@@ -77,6 +80,9 @@ var methods =
     win.cmbn.cdns = methods;
 
 })();
+
+/* Copyright (c) 2012 Yahoo! Inc.  All rights reserved.
+   Copyrights licensed under the MIT License. See the accompanying LICENSE file for terms. */
 
 ;(function(){
 
