@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/gzip/node-cmbn.png)](http://travis-ci.org/gzip/node-cmbn)
 # cmbn
 
 Several public CDNs host popular JS libs, most notably [cdnjs.com](http://www.cdnjs.com/).
