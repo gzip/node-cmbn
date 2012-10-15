@@ -1,0 +1,5 @@
+body { background: url(/assets/images/foo.png); }
+body { background: url(../images/bar.png); }
+body { background: url(baz.png); }
+body { background: url(../../quuz.png); }
+body { background: url(http://www.google.com/images/srpr/logo3w.png); }
