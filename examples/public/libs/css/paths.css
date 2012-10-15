@@ -1,5 +1,6 @@
 body { background: url(/assets/images/foo.png); }
-body { background: url(../images/bar.png); }
-body { background: url(baz.png); }
-body { background: url(../../quuz.png); }
+body { background: url( ../images/bar.png ); }
+body { background: url('baz.png'); }
+body { background: url("../../quuz.png"); }
 body { background: url(http://www.google.com/images/srpr/logo3w.png); }
+body { background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAYDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==) repeat-x 0 200px; }
