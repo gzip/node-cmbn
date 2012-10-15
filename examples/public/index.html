@@ -3,8 +3,8 @@
 // add cdn for localhost
 cmbn.cdns.addCdn('lh', {host: 'localhost:8080', prefix: 'libs/'});
 
-// build a combined url, pointing to localhost, and log it
-console.log(cmbn.client.combine([
+// build a combined url, pointing to localhost
+writeLink(cmbn.client.combine([
     'http://cdnjs.cloudflare.com/ajax/libs/require.js/1.0.8/require.min.js',
     'http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js',
     'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js',
@@ -15,5 +15,15 @@ console.log(cmbn.client.combine([
     'http://yui.yahooapis.com/3.5.1/build/dom-core/dom-core-min.js',
     'http://localhost:8080/libs/cmbn/0.0.1/cmbn.min.js'
 ], {host: 'localhost:8080'}));
+
+// test path replacement
+var cssPath = 'http://localhost:8080/libs/css/paths.css';
+writeLink(cmbn.client.combine([cssPath], {host: 'localhost:8080'}));
+writeLink(cssPath);
+
+function writeLink(path) {
+    document.write('<p><a href="' + path + '">' + path + '</a></p>');
+    console.log(path);
+}
 </script>
 
