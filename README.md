@@ -26,7 +26,7 @@ In addition to the options available for `middleware` ,`createServer` accepts on
 
 * `port` - Port to listen on. Default is 80.
 * `staticDir` - Directory to serve static assets from. Particularly useful if comboing from localhost.
-* `staticMaxAge` - Number of seconds to set for `maxAge` in the `Cache-Control` header if serving local assets.
+* `staticMaxAge` - Number of seconds to set for `max-age` in the `Cache-Control` header if serving local assets.
 
 ### Middleware
 
@@ -43,8 +43,8 @@ In addition to the options available for `middleware` ,`createServer` accepts on
 
 `middleware` takes an optional argument which is an object containing one or more of the following:
 
-* `cacheSize` - The size in bytes to reserve for the [lru-cache](https://github.com/isaacs/node-lru-cache) which stores external assets which have been fetched. Default is `5000000` (~5MB).
-* `cacheFunc` -The cache function used to determine the size of each asset, default is to return `item.length`.
+* `cacheSize` - The size in bytes to reserve for [lru-cache](https://github.com/isaacs/node-lru-cache) which stores fetched assets. Default is `5000000` (~5MB).
+* `cacheFunc` - The cache function used to determine the size of each asset, default is to return `asset.length`.
 
 ### Node Client
 
